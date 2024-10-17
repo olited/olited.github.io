@@ -1,2 +1,1 @@
-# 用于推送静态文件到 litedit.github.io
-# 保持为 private
+# 主分支用于推送静态文件到 gh-pages 分支
