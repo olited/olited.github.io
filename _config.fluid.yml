@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Blog
+title: 博客
 subtitle: ''
 description: ''
 keywords:
-author: John Doe
+author: litedit
 language: zh-CN
 timezone: 'Asia/Shanghai'
 
