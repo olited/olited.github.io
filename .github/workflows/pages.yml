@@ -2,7 +2,7 @@ name: Deploy GitHub Pages
 permissions:
   contents: write
 
-# 触发条件：在 push 到 main 分支后
+# 触发条件: 在 push 到 main 分支后
 on:
   push:
     branches:
@@ -13,17 +13,20 @@ jobs:
     # 服务器环境：最新版 Ubuntu
     runs-on: ubuntu-latest
     steps:
+      # 获取源码
       - name: Checkout
         uses: actions/checkout@v4
+      # 初始化 nodejs
       - name: Use Node.js 21
         uses: actions/setup-node@v4
         with:
           # Examples: 20, 18.19, >=16.20.2, lts/Iron, lts/Hydrogen, *, latest, current, node
           # Ref: https://github.com/actions/setup-node#supported-version-syntax
           node-version: "21.7.2"
+      # 构建
       - name: Build
         run: npm install && npm run build
-
+      # 部署
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.6.8
         with:
