@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 博客
+title: Blog
 subtitle: ''
 description: ''
 keywords:
@@ -103,7 +103,86 @@ theme: fluid
 deploy:
   type: ''
 
-# Set markdown engine
-markdown:
-  plugins:
-    - "@traptitech/markdown-it-katex"
+# Title separator in browser tab, eg: article - site
+tab_title_separator: " | "
+
+# Specify the path of your custom js file, support list. The path is relative to the source directory, such as `/js/custom.js` corresponding to the directory `source/js/custom.js`
+custom_js:
+
+# The usage is the same as custom_js
+custom_css:
+
+
+# Analysis of website visitors
+web_analytics:
+  enable: true
+  # Follow the "Do Not Track" setting of the visitor's browser
+  # See: https://www.w3.org/TR/tracking-dnt/
+  follow_dnt: false
+
+# Navigation bar
+navbar:
+  # The title on the left side of the navigation bar. If empty, it is based on `title` in hexo config
+  blog_title: ""
+  # Navigation bar frosted glass special animation. It is an experimental feature
+  ground_glass:
+    enable: true
+  # Enable Friendship link
+  # TODO: Add friendship link support
+    # menu:
+    # - { key: 'links', link: '/links/', icon: 'iconfont icon-link-fill' }
+
+
+# Search feature, based on hexo-generator-search. If you have installed other search plugins, please disable this feature to avoid generating redundant index files
+search:
+  # Search field
+  # Options: post | page | all
+  field: all
+
+# Footer
+footer:
+  # HTML of the first line of the footer.
+  content: ''
+
+# Set post page
+post:
+  # Set math engine
+  math:
+    enable: true
+    specific: false
+    engine: katex
+  #Enable comment module
+  comments:
+    enable: true
+    type: disqus
+disqus:
+  shortname: fluid
+
+# Set index page
+index:
+  slogan:
+    enable: true
+    api:
+      enable: true
+      url: "https://v1.hitokoto.cn/"
+      method: "GET"
+      headers: {}
+      keys: ["hitokoto"]
+
+about:
+  avatar: /img/avatar_melor.png
+  name: "litedit"
+  intro: "没想好"
+  icons:
+    - { class: 'iconfont icon-github-fill', link: 'https://github.com/litedit', tip: 'GitHub' }
+
+
+# Set Friendship link
+links:
+  items:
+    - {
+      title: 'Fluid Docs',
+      intro: '主题使用指南',
+      link: 'https://hexo.fluid-dev.com/docs/',
+      avatar: '/img/fluid_favicon.png'
+    }
